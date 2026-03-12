@@ -23,6 +23,7 @@ RSpec.describe "Api::V1::Verifications", type: :request do
         expect(json["mentor_name"]).to eq("Mentor")
         expect(json["learner_name"]).to eq("Learner")
         expect(json["created_at"]).to be_present
+        expect(json["metadata"]).to include("evidence_url" => "https://example.com/evidence")
       end
     end
 

@@ -1,25 +1,41 @@
-# README
+# SkillCheck: Credential Verification Engine
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+SkillCheck is a digital credentialing platform built to bridge the "trust gap" in technical mentorship. It provides a secure, API-driven way for mentors to issue verifiable skill badges to learners.
 
-Things you may want to cover:
+## 🚀 Key Features
+- **Secure Verification:** Uses unique hash-based lookups to prevent ID enumeration and unauthorized access.
+- **AI-Native Workflow:** Developed using an AI-assisted engineering process (Cursor/Gemini/Claude) to port MVC patterns from Django to Ruby on Rails.
+- **Evidence-Backed:** Metadata support for linking GitHub PRs, project URLs, or other artifacts as proof of skill competency.
 
-* Ruby version
+## 🛠 Tech Stack
+- **Backend:** Ruby on Rails 7.1 (API-Only mode + ActionView)
+- **Database:** PostgreSQL (JSONB for metadata storage)
+- **Testing:** RSpec (coverage on core verification logic)
+- **Frontend:** Tailwind CSS (Responsive badge views)
 
-* System dependencies
+## 🏁 Getting Started
+1. **Clone and Install:**
+   ```bash
+   git clone [your-repo-link]
+   cd skillcheck
+   bundle install
+   ```
 
-* Configuration
+2. **Database Setup:**
+   ```bash
+   bin/rails db:prepare
+   ```
 
-* Database creation
+3. **Run Tests:**
+   ```bash
+   bundle exec rspec
+   ```
 
-* Database initialization
+4. **View a Badge:**
+   Start the server with:
+   ```bash
+   bin/rails s
+   ```
+   Then visit one of the seeded URLs (example):
+   - `http://localhost:3000/verify/623baf0005e9aec2ef3b50cd67faf0e0`
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# skillcheck
